@@ -1,0 +1,78 @@
+<!doctype html>
+
+<html>
+<!-- <script>
+var increment = 0;
+var flag=0;
+var filename = "gioconda";
+var fullName = filename.concat(increment).concat(".jpg");
+function myFunction() {
+  if(0==flag){
+    var x = document.createElement("IMG");
+    x.setAttribute("src", fullName);
+    //x.setAttribute("width", "304");
+    //x.setAttribute("width", "228");
+    x.setAttribute("id", "picture");
+    x.setAttribute("alt", "Gioconda");
+    document.body.appendChild(x);
+    flag=1;
+  }else{
+    var y = document.createElement("IMG");
+    y.setAttribute("src", fullName);
+    //y.setAttribute("width", "304");
+    //y.setAttribute("width", "228");
+    y.setAttribute("id", "newPicture")
+    y.setAttribute("alt", "Gioconda");
+
+    var oldImg = document.getElementById('picture');
+    document.getElementById('newPicture').replaceChild(y, oldImg);
+  increment += 5;
+}}
+</script> -->
+<style>
+html{
+  background-color: #5a636e;
+}
+body{
+  text-align: center;
+}
+header{
+  background-color: white;
+}
+img{
+  max-width: 800px;
+  max-height: 800px;
+}
+h1{
+  text-align: center;
+  font-family: "Courier New", Monaco, monospace;
+  border-style: solid;
+}
+</style>
+<script>
+var id = 0;
+var filename = "tulp";
+function changeImg(id) {
+	elem = document.getElementById("imageID");
+	elem.setAttribute("src", filename + id + ".jpg");
+}
+
+function onImageClick(){
+  if(id<194){
+	id+=5;
+	changeImg(id);
+}else{
+  changeImg(199);
+}
+}
+</script>
+<head>
+  <title>0xFFC4</title>
+</head>
+<body>
+  <header>
+    <h1><a href="./index.html">0xFFC4</a></h1>
+  </header>
+  <img id="imageID" src="tulp.jpg" onclick="onImageClick()" />
+</body>
+</html>
